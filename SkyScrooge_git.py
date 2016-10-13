@@ -33,26 +33,17 @@ def get_csv(_from,_to,_datetime,_pax,_currency):
         #country code,currency,language
 
         params=[['UK','GBP','en-GB'],['SG','SGD','en-SG'],['MY','MYR','ms-MY'],['ID','IDR','id-ID'],['BR','BRL','pt-BR'],['MX','MXN','es-MX'],['US','USD','en-US']]      
-        params=params[0:3]
+        params=params[0:2]
         count_key=0
         count=0
         for param in params:  
-            if count_key<5:
+            if count_key==0:
                 api_key=key1
-            elif count_key<10:
+            elif count_key==1:
                 api_key=key2
-            elif count_key<15:
+            elif count_key==2:
                 api_key=key3
-            elif count_key==15:
-                count_key=0
-            elif count_key<20:
-                api_key=key4
-            elif count_key<25:
-                api_key=key5
-            elif count_key<30:
-                api_key=key6
-            elif count_key==30:
-                count_key=0
+                
             flights_service = Flights(api_key)
             result = flights_service.get_result(
             country=param[0],
@@ -95,7 +86,7 @@ def get_csv(_from,_to,_datetime,_pax,_currency):
                     df1=pd.DataFrame([[carriers,param[0],arrival,departure,duration,num_stops,price,"{0}".format(price_orig),dl]],columns=cnames)
                     frames=[df,df1]
                     df=pd.concat(frames)
-            count=count+1
+                count=count+1
             count_key=count_key+1
         
         pd.options.display.max_colwidth = 1000
