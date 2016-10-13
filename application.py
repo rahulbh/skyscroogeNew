@@ -4,7 +4,8 @@ from flask import Flask, render_template, request
 from locale import currency
 import SkyScrooge_git
 import urllib.request as urllib
-import json 
+import json
+import os
 
 application = Flask(__name__)
 
