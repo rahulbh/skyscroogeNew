@@ -100,7 +100,7 @@ def get_csv(_from,_to,_datetime,_pax,_currency):
         
         pd.options.display.max_colwidth = 1000
         data=df.sort_values(by='Price')
-        data.to_csv('fareresultsnew.csv',index = False)
+        #data.to_csv('fareresultsnew.csv',index = False)
         """df['DeeplinkUrl'] = "<a href=\""+data['DeeplinkUrl']+"\">Click here to Book</a>"""
         HTML(data.to_html('./templates/Results.html',index = False))
         
