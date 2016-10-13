@@ -9,7 +9,7 @@ $("td").each(function() {
 
 $("body").prepend("<input id='searchInput' value='Type To Filter'>");
 
-$("body").prepend("<h3>From:</h3> <h3>{{ _from }}</h3> <h3>{{ _to }}</h3>");
+$("body").prepend("<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel='stylesheet' href='./static/index.css' /><div class='topbar' class='row' ><div><h4 class='site-title' class='col-md-4' style='height:30px;line-height:30px'><a href='#'><div class='logo'><em> SkyScrooge<sup>Beta</sup></em></div></a></h4></div><div class='col-md-4'><p>  </p></div><img src='./static/powered.png' alt='' class='col-md-4' style='float:right;width:254px;height:45px;''></div>");
 
 
 var maxRows = 10;
