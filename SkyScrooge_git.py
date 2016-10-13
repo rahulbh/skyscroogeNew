@@ -33,6 +33,7 @@ def get_csv(_from,_to,_datetime,_pax,_currency):
         #country code,currency,language
 
         params=[['UK','GBP','en-GB'],['SG','SGD','en-SG'],['MY','MYR','ms-MY'],['ID','IDR','id-ID'],['BR','BRL','pt-BR'],['MX','MXN','es-MX'],['US','USD','en-US']]      
+        params=params[0:3]
         count_key=0
         count=0
         for param in params:  
@@ -64,7 +65,7 @@ def get_csv(_from,_to,_datetime,_pax,_currency):
             adults=int(_pax)).parsed
             if result is None :
                 break
-            time.sleep(2)
+            #time.sleep(2)
             cnames=['Carriers','Country','Arrival','Departure','Duration(mins)','Number of stops','Price','Price (Original Currency)','Book']
             
             for x in result['Itineraries']:
