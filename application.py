@@ -21,7 +21,6 @@ def submit():
     _pax = request.form['pax']
     _currency = request.form['currency']
     
-    import script
     SkyScrooge_git.get_csv(_from,_to,_datetime,_pax,_currency)
         
     
