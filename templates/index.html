@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><link rel='stylesheet' href='{{ url_for("static", filename='index.css') }}' />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+<header class="site-header" role="banner">
+
+    <div class="topbar" class="row" >
+        <div><h4 class="site-title" class="col-md-4" style="height:30px;line-height:30px"><a href="#"><div class="logo">
+          <em> SkyScrooge<sup>Beta</sup></em></div></a></h4></div>  
+        <div class="col-md-4"><p>  </p></div>
+          <img src="{{ url_for('static', filename='powered.png') }}" alt="Powered by SkyScanner" class="col-md-4  " style="float:right;width:254px;height:45px;">
+
+  </div>
+
+    <div class="header-image">
+        <div class="header-image-text">
+          <h2 class="header-title"><em>SkyScrooge</em></h2>
+            <p class="header-description">The cheapest fare to anywhere</p>
+          <div class="formbox">
+<div class="container">
+  
+<form action="submit" method="post">
+<div class="row">
+  <div class="col-md-2"> 
+    From: <input type="text" name="_from" id="_from" class="form-control input-lg"></div>
+  <div class="col-md-2">
+    To: <input type="text" name="to" id="to" ></div><div class="col-md2"></div><div class="col-md-2">
+Date: <input type="text" name="datetime" id="datetime" placeholder="Enter in YYYY-MM-DD"> </div><div class="col-md-2">
+  PAX: <input type="text" name="pax" id="pax" ></div><div class="col-md-2">
+Preferred Currency: <input type="text" name="currency" id="currency" >
+  </div><div class="col-md-2"> <br>
+<input type="submit" value="Search" id="submit"> 
+</div>
+</div>
+</form>
+  </div>
+  </div>
+            
+        </div>
+    </div>
+
+</header>
+
+<main role="main" class="site-main">
+
+    
+
+    
+   
+    <section class="fixed-width">
+        <h2>How would Ebenezer Scrooge save money on flight fares today? He would use SkyScrooge! :</h2>
+           <li class="icon ion-code"><em>SkyScrooge is the only travel website in the world that allows you to compare flight prices across different booking countries!</em></li>
+
+        <ul class="large-list">
+            <li class="icon ion-code">Airfares vary based on the which country you access a travel website in.</li>
+       
+            <li class="icon ion-code">Did you know that flight prices can vary upwards of 10% depending on the country version of the website used? Well, Scrooge does, and he uses SkyScrooge to save his money spent on air fares.</li>
+            <li class="icon ion-code">SkyScrooge shows fares across different country versions of the SkyScanner website.</li>
+            <li class="icon ion-code">All fares and deeplinks for bookings have been verified by SkyScanner.  </li>
+            <li class="icon ion-code">No more waiting for weeks for prices to drop by 10% as predicted by several websites and apps!</li>
+          <li class="icon ion-code"><strong>Be like Scrooge.</strong> Use SkyScrooge to visit your dream destinations with the cheapest airfare costs.</li>
+            
+        </ul>
+
+        
+    </section>
+
+        <section class="fixed-width highlighted-bg">
+        <h2>Meet the founders</h2>
+
+        <div class="col third" width=20%>
+            <img src="https://scontent-sin6-1.xx.fbcdn.net/t31.0-8/12418811_10208206773624839_3762462977982705282_o.jpg" alt="" class="landing-icon testimonial-avatar"><p><b><em> Data Analysis,Algorithm and Front-End Design</em></b></p>
+            <p>Yusuf loves exploring datasets and coming up with wacky ideas. He is currently a Computer Engineering undergraduate student at Nanyang Technological University. He is passionate about rock music, football and weightlifting. 
+                </p>
+        </div>
+
+        
+
+        <div class="col third">
+            <img src="https://scontent-sin6-1.xx.fbcdn.net/v/t1.0-9/13999_10205110750919316_6236720388635983142_n.jpg?oh=4fec6ccd206939996df9abab52c33a23&oe=586E3B0E" alt="Rahul Image" class="landing-icon testimonial-avatar"><p><b>Back-end design and development</b></p>
+            <p>Rahul is a final year student at NTU, Singapore, studying Electrical and Electronic Engineering. He likes to tinker with stuff and wants to know the whole in and outs of a system. He is passionate about music(any kind) and plays tennis(sometimes).
+            </p>
+        </div>
+
+    </section>
+
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+    <ul class="inline-list">
+        
+        <li><a href="https://github.com/rahulbh/skyscrooge/blob/master/sky/templates/index.html" class="icon ion-social-github">Github</a></li>
+      
+        <li><a href="https://www.facebook.com/skyscrooge/" class="icon ion-social-facebook">Facebook</a></li>
+     
+    </ul>
+</footer>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+<script type="text/havascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
